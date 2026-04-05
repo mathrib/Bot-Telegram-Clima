@@ -124,9 +124,3 @@ Caso o usuário envie uma cidade inválida:
 ```
 ❌ Cidade não encontrada. Use o formato Cidade,UF,BR (ex.: São Paulo,SP,BR).
 ```
-
----
-
-## 👨‍💻 Autor
-
-Desenvolvido como atividade prática para aprendizado de integração de APIs e automação de workflows com N8N.
