@@ -1,0 +1,77 @@
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+    environment:
+      GENERIC_TIMEZONE: America/Sao_Paulo
+      TZ: America/Sao_Paulo
+
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: postgres
+      DB_POSTGRESDB_DATABASE: postgres
+      DB_POSTGRESDB_USER: postgres
+      DB_POSTGRESDB_PASSWORD: postgres
+
+      EXECUTIONS_MODE: queue
+      QUEUE_BULL_REDIS_HOST: redis
+
+      # 🔥 CONFIGURAÇÃO CORRETA DO WEBHOOK
+      WEBHOOK_URL: https://jamarion-autoloading-lili.ngrok-free.dev
+      N8N_HOST: jamarion-autoloading-lili.ngrok-free.dev
+      N8N_PROTOCOL: https
+
+    depends_on:
+      - postgres
+      - redis
+
+  n8n-worker:
+    image: n8nio/n8n:latest
+    command: worker
+    volumes:
+      - n8n_data:/home/node/.n8n
+    environment:
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: postgres
+      DB_POSTGRESDB_DATABASE: postgres
+      DB_POSTGRESDB_USER: postgres
+      DB_POSTGRESDB_PASSWORD: postgres
+
+      EXECUTIONS_MODE: queue
+      QUEUE_BULL_REDIS_HOST: redis
+
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+    image: ankane/pgvector
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - redis_data:/data
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    command: http n8n:5678
+    environment:
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
+    depends_on:
+      - n8n
+    volumes:
+      - ngrok_data:/ngrok
+
+volumes:
+  n8n_data:
+  postgres_data:
+  redis_data:
+  ngrok_data:
