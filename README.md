@@ -50,9 +50,11 @@ O fluxo do chatbot realiza as seguintes etapas:
 4. No N8N:
 
    * Crie um nó Telegram Trigger:
+     
      <img width="386" height="365" alt="image" src="https://github.com/user-attachments/assets/a03acec6-b7c2-4098-9e78-923e913d8bdb" />
      
    * Insira o token, conforme mostra a imagem abaixo:
+     
      <img width="1180" height="415" alt="image" src="https://github.com/user-attachments/assets/dde4baf2-11d7-40ab-a636-f636bf1590d0" />
 
 
