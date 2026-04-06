@@ -58,6 +58,8 @@ O fluxo do chatbot realiza as seguintes etapas:
      <img width="1180" height="415" alt="image" src="https://github.com/user-attachments/assets/dde4baf2-11d7-40ab-a636-f636bf1590d0" />
 
 
+   * Clique em salvar e o telegram será conectado ao N8N 
+
 ---
 
 ### 🌤️ OpenWeather
@@ -66,6 +68,14 @@ O fluxo do chatbot realiza as seguintes etapas:
    https://openweathermap.org/api
 2. Crie uma conta gratuita
 3. Gere sua API Key
+4. O endpoint e a API KEY precisam ser inseridos em um nó http:
+
+
+<img width="403" height="822" alt="image" src="https://github.com/user-attachments/assets/861c1074-8fdc-43a8-817f-becf44cbaa73" />
+
+
+
+* Por questões de segurança a API KEY foi riscada
 
 ---
 
