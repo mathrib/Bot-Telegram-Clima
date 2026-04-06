@@ -56,6 +56,8 @@ O fluxo do chatbot realiza as seguintes etapas:
      ```
      TELEGRAM_BOT_TOKEN
      ```
+     <img width="1180" height="415" alt="image" src="https://github.com/user-attachments/assets/dde4baf2-11d7-40ab-a636-f636bf1590d0" />
+
 
 ---
 
