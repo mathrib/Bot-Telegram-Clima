@@ -74,35 +74,10 @@ O fluxo do chatbot realiza as seguintes etapas:
 <img width="403" height="822" alt="image" src="https://github.com/user-attachments/assets/861c1074-8fdc-43a8-817f-becf44cbaa73" />
 
 
-
 * Por questões de segurança a API KEY foi riscada
 
 ---
 
-### 🔐 Variáveis de Ambiente
-
-O projeto utiliza variáveis de ambiente para segurança das credenciais.
-
-Você deve configurar:
-
-```
-OPENWEATHER_API_KEY=SuaChaveAqui
-TELEGRAM_BOT_TOKEN=SeuTokenAqui
-```
-
-⚠️ Importante:
-Sem essas variáveis configuradas, o workflow não funcionará corretamente.
-
-🧐 Observação:
-As credenciais não estão incluídas no arquivo JSON exportado do workflow por questões de segurança.
-
-Por isso, após importar o workflow, é necessário configurar manualmente:
-
-- O token do bot do Telegram (TELEGRAM_BOT_TOKEN)
-- A chave da API do OpenWeather (OPENWEATHER_API_KEY)
-
-
----
 
 ## ▶️ Como Executar o Chatbot
 
