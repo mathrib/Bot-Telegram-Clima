@@ -103,6 +103,11 @@ São Paulo,SP
 
 ---
 
+### ✅ Exemplo:
+
+<img width="752" height="588" alt="image" src="https://github.com/user-attachments/assets/ca659737-3ad7-4e31-ac79-0018ad38b976" />
+
+
 ### ❌ Exemplo de Erro:
 
 Caso o usuário envie uma cidade inválida:
